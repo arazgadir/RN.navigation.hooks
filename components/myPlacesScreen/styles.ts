@@ -1,21 +1,44 @@
 import { StyleSheet } from 'react-native';
 
 
-    export const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
 
-        container: {
-            flex: 1,
-            backgroundColor: 'blue',
-            justifyContent: 'center',
-            alignItems :'center'
+    container: {
+        flex: 1,
+        // backgroundColor: 'blue',
+        // justifyContent: 'center',
+        // alignItems :'center'
 
-        },
-        box: {
-            backgroundColor: 'tomato',
-            width: 100,
-            height: 100
-           
+    },
+    todosContainer: {
+        flex: 1,
+        marginHorizontal: 5,
+        flexDirection: 'row',
+        marginVertical: 5,
+    },
 
-        },
-    });
-    
+    schedule: {
+        backgroundColor: 'green',
+        flex: 1,
+        borderColor: 'black',
+        borderWidth: 2,
+        marginLeft: 3,
+        borderRadius : 10
+    },
+    image: {
+      
+    },
+    imageIn: {
+       height: 250,
+       width: 60,
+       borderRadius : 10
+      
+    },
+    name: {
+        color: 'red',
+        fontSize: 16,
+        lineHeight: 20,
+        fontWeight: 'bold'
+    },
+});
+

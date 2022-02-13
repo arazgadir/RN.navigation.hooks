@@ -1,13 +1,44 @@
-import React, {FC} from 'react'
-import { View, Text } from 'react-native';
+import React, { FC, useState } from 'react'
+import { View, Text, Pressable } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
+import useInput from '../../hoooks/useInput';
 import { styles } from './styles';
 
 
 export const SearchScreen: FC = () => {
-return (
-<View style = {styles.container}>
-  <Text> Hello from Search Screen</Text>
-</View>
 
-)
+  // const [name, setName] = useState('')
+  // const [password, setPassword] = useState('')
+
+
+  const username = useInput('')
+  const password = useInput('')
+
+
+  return (
+
+
+    <View style={styles.container}>
+      <Text> Hello from Search Screen </Text>
+      <TextInput
+       {...username}
+      // onChangeText={username.setValue}
+      // value = {userName}
+        style={styles.textInput}
+        placeholder="username"
+      ></TextInput>
+      <TextInput
+       {...password}
+      // onChangeText={setPassword}
+      // value = {password}
+        style={styles.textInput}
+        placeholder="password"
+      ></TextInput>
+
+      <Pressable style={styles.button} onPress={() => console.log('username: ', username.value, 'password: ', password.value)}>
+        <Text > Press me</Text>
+      </Pressable>
+    </View>
+
+  )
 }
