@@ -19,25 +19,21 @@ export const ProfileScreen: FC = () => {
   return (
 
     <View style={{ ...styles.container, backgroundColor: color }}>
-
       <Pressable style={styles.click} onPress={() => { handleClick() }}>
         <Text style={styles.text} > this is me  </Text>
       </Pressable>
       <View>
         <Text style={styles.counter}> Count: {count}</Text>
       </View>
-
       <Pressable style={{ ...styles.click, backgroundColor: 'green' }} onPress={() => { setCounter(counting * 2) }}>
         <Text style={styles.text} > this is me  </Text>
       </Pressable>
       <View>
         <Text style={styles.counter}> Count: {counting}</Text>
       </View>
-
       <Pressable style={{ ...styles.click, backgroundColor: 'yellow' }} onPress={() => { setCounter(counting / 2) }}>
         <Text style={styles.text} > Reset </Text>
       </Pressable>
-
     </View>
 
 

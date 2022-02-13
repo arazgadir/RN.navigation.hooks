@@ -6,35 +6,22 @@ import { styles } from './styles';
 
 
 export const SearchScreen: FC = () => {
-
-  // const [name, setName] = useState('')
-  // const [password, setPassword] = useState('')
-
-
   const username = useInput('')
   const password = useInput('')
-
-
   return (
-
 
     <View style={styles.container}>
       <Text> Hello from Search Screen </Text>
       <TextInput
        {...username}
-      // onChangeText={username.setValue}
-      // value = {userName}
         style={styles.textInput}
         placeholder="username"
       ></TextInput>
       <TextInput
        {...password}
-      // onChangeText={setPassword}
-      // value = {password}
         style={styles.textInput}
         placeholder="password"
       ></TextInput>
-
       <Pressable style={styles.button} onPress={() => console.log('username: ', username.value, 'password: ', password.value)}>
         <Text > Press me</Text>
       </Pressable>

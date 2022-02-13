@@ -1,19 +1,13 @@
 import React, { FC, useState, useCallback } from 'react'
 import { View, Text, ScrollView, Image, RefreshControl } from 'react-native';
 import { styles } from './styles';
-import Animated from 'react-native-reanimated'
-import { TapGestureHandler, State } from 'react-native-gesture-handler';
 import { useEffect } from 'react';
 import useRefresh from '../../hoooks/useRefresh';
 
 
 export const MyPlacesScreen: FC = () => {
-
-  
-
   const [todos, setTodos] = useState([]);
   const refresh = useRefresh(false)
-
   const getTodos = () => {
     fetch('https://api.punkapi.com/v2/beers')
       .then(response => response.json())
@@ -45,7 +39,5 @@ export const MyPlacesScreen: FC = () => {
       )
       }
     </ScrollView>
-
-
   )
 }
